@@ -1,0 +1,39 @@
+# Montana content pack: Thistle Creek Ranch.
+# Setting-specific data only. The engine reads this; it never hard-codes Montana.
+id: montana
+name: Thistle Creek Ranch
+location: Harlan Crossing, Montana
+
+calendar:
+  # Game day 1. 1 March 2027 is a Monday.
+  start: { year: 2027, month: 3, day: 1 }
+  # First playable season ends mid-April (end of events batch 1).
+  seasonEnd: { month: 4, day: 15 }
+
+# Daily weather, rolled each morning at 06:00.
+# Temperatures in °C. Typical central Montana foothills values (placeholders to tune).
+weather:
+  byMonth:
+    3:
+      high: { mean: 7, spread: 6 }
+      low: { mean: -7, spread: 5 }
+      conditions: { clear: 30, cloudy: 30, windy: 15, snow_showers: 20, heavy_snow: 5 }
+    4:
+      high: { mean: 13, spread: 6 }
+      low: { mean: -1, spread: 4 }
+      conditions: { clear: 30, cloudy: 30, windy: 15, rain: 15, snow_showers: 8, heavy_snow: 2 }
+    5:
+      high: { mean: 18, spread: 6 }
+      low: { mean: 4, spread: 4 }
+      conditions: { clear: 40, cloudy: 30, windy: 10, rain: 18, snow_showers: 2 }
+    6:
+      high: { mean: 23, spread: 5 }
+      low: { mean: 8, spread: 3 }
+      conditions: { clear: 50, cloudy: 25, windy: 10, rain: 15 }
+  labels:
+    clear: Clear
+    cloudy: Overcast
+    windy: Strong winds
+    rain: Rain
+    snow_showers: Snow showers
+    heavy_snow: Heavy snow

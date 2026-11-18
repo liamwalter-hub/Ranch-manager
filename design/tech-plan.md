@@ -225,3 +225,9 @@ Each milestone is playable on the phone.
 - 2026-11-18: "Next day" does not stop for delegable inbox items. They stay in the inbox until their deadline.
 - 2026-11-18: Long absences are simulated faithfully. Pile-up will be tested before any cap is considered.
 - 2026-11-18: Content files are YAML; the map is a stylised flat SVG; design docs live in the repo under `design/`.
+
+---
+
+## 7. Progress log
+- 2026-11-18 **M0 done:** installable PWA, works offline, auto-deploys to GitHub Pages. Tested on the owner's Samsung (Chrome).
+- 2026-11-18 **M1 built:** game clock (1 March 2027 start at local time of day, three blocks, never runs backwards), catch-up on open with a "while you were away" summary, Next decision / Next day, daily weather from the pack, autosave to IndexedDB with 3 rolling backups, save export/import, new game. Debug tab (tap the ranch name 5 times, or add `?debug` to the address): speed multiplier, jump to date, new game with seed, state inspector. Engine tests cover the calendar, seeded RNG, determinism (one long run = many short runs), the never-backwards rule and fast forward.
