@@ -1,0 +1,59 @@
+/* Ranch-office palette: ledger paper, saddle leather, brass. */
+:root {
+  --paper: #f3ede1;
+  --card: #fffaf0;
+  --ink: #2a2118;
+  --muted: #6e6152;
+  --leather: #3b2f22;
+  --brass: #e8c27a;
+  --line: #ddd2bf;
+  --ok: #2f6b3a;
+  --warn: #9a5b12;
+  --danger: #a3281f;
+  --radius: 10px;
+  --gutter: 16px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1b1712;
+    --card: #26201a;
+    --ink: #efe6d6;
+    --muted: #a99a85;
+    --line: #3d342a;
+    --ok: #7cc48a;
+    --warn: #e0a554;
+    --danger: #ef7d73;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--paper); }
+body { min-height: 100dvh; }
+.app { max-width: 560px; margin: 0 auto; min-height: 100dvh; display: flex; flex-direction: column; }
+.topbar {
+  background: var(--leather); color: var(--brass);
+  padding: calc(env(safe-area-inset-top) + 12px) var(--gutter) 12px;
+}
+.topbar__title { font-weight: 700; font-size: 1.15rem; letter-spacing: .02em; }
+.topbar__sub { font-size: .8rem; opacity: .8; }
+.content { padding: var(--gutter); display: flex; flex-direction: column; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+.card__title { margin: 0 0 8px; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.clock { display: flex; align-items: baseline; gap: 10px; }
+.clock__time { font-size: 2.4rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.clock__block { font-size: 1rem; color: var(--muted); }
+.muted { color: var(--muted); font-size: .9rem; line-height: 1.4; }
+.table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.table th { text-align: left; font-weight: 500; color: var(--muted); padding: 7px 8px 7px 0; width: 45%; }
+.table td { padding: 7px 0; }
+.table tr + tr { border-top: 1px solid var(--line); }
+.ok { color: var(--ok); }
+.warn { color: var(--warn); }
+.banner {
+  display: block; width: 100%; border: 0; padding: 14px var(--gutter);
+  background: var(--brass); color: var(--leather); font: inherit; font-weight: 600; text-align: center;
+}
+.banner--quiet { background: var(--ok); color: #fff; }
